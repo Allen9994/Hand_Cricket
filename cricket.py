@@ -1,18 +1,17 @@
 import random
-g = int(input("ODD OR EVEN?\n Odd : 1 Even : 2\t"))
+g = int(input("ODD OR EVEN?\nPress 1 : Odd & 2 : Even\t"))
 g = g%2
-flag = 0
-while flag == 0:
+while 1:
     m = input("Toss")
     if len(m) == 0:
         print("Try again")
     elif ord(m)>54 or ord(m)<49:
-        print("Not a choice fool")
+        print("Not a choice !")
     else:
         n = int(m)
         num = random.randint(1,6)
         n = n + num
-        flag = 1
+        break
 if n % 2 == g:
     print("Your toss won",n-num," ",num)
     g = int(input("Batting or bowling?\n Batting : 1 Bowling : 2\t"))
@@ -28,10 +27,9 @@ else:
         print("PC chose to bat first")
     else:
         print("PC chose to bowl first")
-flag = 0
 score1 = 0
 score2 = 0
-while flag == 0:
+while 1:
     m = input()
     if len(m) == 0:
         print("Try again")
@@ -40,13 +38,13 @@ while flag == 0:
     else:
         n = int(m)
         num = random.randint(1,6)
+        print("YOU  PC")
         print(n," ",num)
         if n == num:
-            flag = 1
             if h == 1:
-                print("Out! Your turn to bowl. Your runs: " ,score1)
+                print("Out! You scored ", score1, "runs. Your turn to bowl")
             else:
-                print("Out! Your turn to bat. PC's runs: ",score2)
+                print("Out! PC scored ", score2, "runs. Your turn to bat")
             break
         else:
             if h == 1:
@@ -54,18 +52,19 @@ while flag == 0:
             else:
                 score2 = score2 + num
 flag = 0
-while flag == 0:
+while 1:
     m = input()
     if len(m) == 0:
         print("Try again")
     elif ord(m)>54 or ord(m)<49:
-        print("Not a choice fool")
+        print("Not a choice !")
     else:
         n = int(m)
         num = random.randint(1,6)
+        print("YOU  PC")
         print(n," ",num)
         if n == num:
-            flag = 1
+            break
         else:
             if h == 1:
                 score2 = score2 + num
