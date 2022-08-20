@@ -34,7 +34,7 @@ while 1:
     if len(m) == 0:
         print("Try again")
     elif ord(m)>54 or ord(m)<49:
-        print("Not a choice fool")
+        print("Not a choice ")
     else:
         n = int(m)
         num = random.randint(1,6)
